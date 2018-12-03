@@ -3,14 +3,14 @@ import exampleRoute from './server/routes/example';
 
 export default function (kibana) {
   return new kibana.Plugin({
-    require: ['elasticsearch', 'kibana' ],
-    name: 'flip-plugin',
+    require: ['elasticsearch'],
+    name: 'flip-integration',
     uiExports: {
       
       app: {
-        title: 'Monitoring',
-        description: 'This plugin is used to enhance the Kibana application with the option to display the projects based on roles and filter the dashboard with the roles',
-        main: 'plugins/flip-plugin/app'
+        title: 'Flip Integration',
+        description: 'An awesome Kibana plugin',
+        main: 'plugins/flip-integration/app'
       },
       
       
@@ -18,6 +18,10 @@ export default function (kibana) {
         resolve(__dirname, './translations/es.json')
       ],
       
+      
+      hacks: [
+        'plugins/flip-integration/hack'
+      ]
       
     },
 

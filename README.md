@@ -1,6 +1,6 @@
-# flip-integration
+# flip-plugin
 
-> An awesome Kibana plugin
+> This plugin is used to enhance the Kibana application with the option to display the projects based on roles and filter the dashboard with the roles
 
 ---
 
